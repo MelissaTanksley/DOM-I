@@ -37,6 +37,37 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+// nav items
+let navItems = document.querySelectorAll('nav a');
+console.log(navItems);
+for (let i = 0; i < navItems.length; i++) {
+	navItems[i].innerHTML = `${siteContent.nav['nav-item-' + (i + 1)]}`;
+}
+
+// cta heading, button, image
+let ctaText = document.querySelector('.cta-text h1');
+ctaText.textContent = siteContent.cta.h1;
+
+let ctaBtn = document.querySelector('.cta-text button');
+ctaBtn.textContent = siteContent.cta.button;
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute('src', siteContent.cta['img-src']);
+
+
+
+
+
+// contact
+let contactTitle = document.querySelector('.contact h4');
+let contactContent = document.querySelectorAll('.contact p');
+
+contactTitle.textContent = siteContent.contact['contact-h4'];
+contactContent[0].innerHTML = '123 Way 456 Street<br />Somewhere, USA';
+contactContent[1].textContent = siteContent.contact.phone;
+contactContent[2].textContent = siteContent.contact.email;
+
+// footer
+let footer = document.querySelector('footer p');
+footer.textContent = siteContent.footer.copyright;
+
