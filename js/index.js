@@ -44,6 +44,10 @@ for (let i = 0; i < navItems.length; i++) {
 	navItems[i].innerHTML = `${siteContent.nav['nav-item-' + (i + 1)]}`;
 }
 
+// logo image
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+
 // cta heading, button, image
 let ctaText = document.querySelector('.cta-text h1');
 ctaText.textContent = siteContent.cta.h1;
