@@ -37,6 +37,8 @@ const siteContent = {
   },
 };
 
+///// My CODE /////
+
 // nav items
 let navItems = document.querySelectorAll('nav a');
 console.log(navItems);
@@ -82,7 +84,7 @@ let contactTitle = document.querySelector('.contact h4');
 let contactContent = document.querySelectorAll('.contact p');
 
 contactTitle.textContent = siteContent.contact['contact-h4'];
-contactContent[0].innerHTML = '123 Way 456 Street<br />Somewhere, USA';
+contactContent[0].innerHTML = '123 Way 456 Street <br> Somewhere, USA';
 contactContent[1].textContent = siteContent.contact.phone;
 contactContent[2].textContent = siteContent.contact.email;
 
