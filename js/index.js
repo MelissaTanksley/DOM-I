@@ -39,12 +39,45 @@ const siteContent = {
 
 ///// My CODE /////
 
+// change color of nav links
+/*
+nav.forEach((item, index) => {
+  item.style.color = "green";
+}) 
+
+ -or- 
+navLinkOne[0].style.color = 'green';
+navLinkOne[1].style.color = 'green';
+navLinkOne[2].style.color = 'green';
+navLinkOne[3].style.color = 'green';
+navLinkOne[4].style.color = 'green';
+navLinkOne[5].style.color = 'green';
+navLinkOne[6].style.color = 'green';
+navLinkOne[7].style.color = 'green'; 
+
+
+*/
+
+
+
+// add 2 items to nav
+selectedNavLinks = document.getElementsByTagName("nav")[0];
+let createNewNode = (name) => {
+  let newNode = document.createElement("a");
+  newNode.innerHTML = name;
+  return newNode;
+}
+selectedNavLinks.prepend(createNewNode("TL Brian"));
+selectedNavLinks.append(createNewNode("Home"));
+
 // nav items
 let navItems = document.querySelectorAll('nav a');
 console.log(navItems);
 for (let i = 0; i < navItems.length; i++) {
 	navItems[i].innerHTML = `${siteContent.nav['nav-item-' + (i + 1)]}`;
 }
+
+
 
 // logo image
 let logo = document.getElementById("logo-img");
