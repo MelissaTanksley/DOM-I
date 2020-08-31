@@ -1,7 +1,10 @@
 body {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+
   align-items: center;
+  margin: 375px;
   color: white;
   background-color: lightslategray;
 }
@@ -15,5 +18,15 @@ body {
   color: red;
 }
 
+.button {
+  display: inline-block;
+  margin-left: 12px; 
+}
 
 
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
