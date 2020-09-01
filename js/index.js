@@ -37,6 +37,19 @@ const siteContent = {
   },
 };
 
+const newATag1 = document.createElement('a')
+const mainNav = document.querySelector('nav')
+newATag1.innerText = 'Reviews'
+newATag1.href = '#'
+mainNav.prepend(newATag1)
+newATag1.style.color = 'green'
+
+const newATag2 = document.createElement('a')
+const mainNav2 = document.querySelector('nav')
+newATag2.innerText = 'Hi Brian'
+newATag2.href = '#'
+mainNav2.prepend(newATag2)
+newATag2.style.color = 'green'
 
 ///// My CODE /////
 
@@ -44,7 +57,9 @@ const siteContent = {
  let aTags = document.querySelectorAll('a')
  aTags.forEach(link => link.style.color ='green')
 
-// add 2 items to nav
+ console.log(aTags)
+
+/*// add 2 items to nav
 selectedNavLinks = document.getElementsByTagName("nav")[0];
 let createNewNode = (name) => {
   let newNode = document.createElement("a");
@@ -52,9 +67,10 @@ let createNewNode = (name) => {
   return newNode;
 }
 
+selectedNavLinks.appendChild(createNewNode("Home"));
 selectedNavLinks.prepend(createNewNode("Hello, TL Brian"));
-selectedNavLinks.append(createNewNode("Home"));
 
+console.log(selectedNavLinks) */
 
 // nav items
 let navItems = document.querySelectorAll('nav a');
@@ -63,10 +79,11 @@ for (let i = 0; i < navItems.length; i++) {
 	navItems[i].innerHTML = `${siteContent.nav['nav-item-' + (i + 1)]}`;
 }
 
-
 // logo image
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+console.log(logo)
 
 // cta heading, button, image
 let ctaText = document.querySelector('.cta-text h1');
@@ -78,10 +95,15 @@ ctaBtn.textContent = siteContent.cta.button;
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent.cta['img-src']);
 
+console.log(ctaText)
+console.log(ctaBtn)
+console.log(ctaImg)
+
 // middle image
 let middleImg = document.getElementById("middle-img");
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
+console.log(middleImg)
 
 
 // main text
@@ -97,6 +119,8 @@ mainTextContent[3].getElementsByTagName("p")[0].innerHTML = siteContent["main-co
 mainTextContent[4].getElementsByTagName("h4")[0].innerHTML = siteContent["main-content"]["vision-h4"];
 mainTextContent[4].getElementsByTagName("p")[0].innerHTML = siteContent["main-content"]["vision-content"];
 
+console.log(mainTextContent)
+
 // contact
 let contactTitle = document.querySelector('.contact h4');
 let contactContent = document.querySelectorAll('.contact p');
@@ -106,7 +130,12 @@ contactContent[0].innerHTML = '123 Way 456 Street <br> Somewhere, USA';
 contactContent[1].textContent = siteContent.contact.phone;
 contactContent[2].textContent = siteContent.contact.email;
 
+console.log(contactTitle)
+
 // footer
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent.footer.copyright;
+
+console.log(footer)
+
 
